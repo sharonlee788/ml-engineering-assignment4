@@ -16,3 +16,5 @@ def say_hi(msg: str = "Hi!", file_directory: str = "/app/data/") -> None:
 
 if __name__ == "__main__":
     say_hi()
+
+    

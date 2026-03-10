@@ -1,4 +1,3 @@
-import os
 from app import build_filename
 
 def test_build_filename():

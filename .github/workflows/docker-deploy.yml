@@ -20,9 +20,9 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
             docker pull ${{ vars.DOCKER_USERNAME }}/ml-engineering-assignment4:latest
-            docker stop ${{ vars.DOCKER_USERNAME }}/ml-engineering-assignment4 || true
-            docker rm ${{ vars.DOCKER_USERNAME }}/ml-engineering-assignment4 || true
-            docker run -d --name ${{ vars.DOCKER_USERNAME }}/ml-engineering-assignment4 -v /opt/assignment_outputs:/app/data ${{ vars.DOCKER_USERNAME }}/ml-engineering-assignment4:latest
+            docker stop ml-engineering-assignment4 || true
+            docker rm ml-engineering-assignment4 || true
+            docker run -d --name ml-engineering-assignment4 -v /opt/assignment_outputs:/app/data ${{ vars.DOCKER_USERNAME }}/ml-engineering-assignment4:latest
 
 # The final block "logs on" to the remote server
 # - gets the latest docker image from the repository
